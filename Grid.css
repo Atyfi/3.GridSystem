@@ -1,0 +1,169 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Header */
+.kol .header{
+    width: 100%;
+    height: 60vh;
+    background-color: rgb(12, 12, 12);
+    color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.kol .header h1{
+    font-size: 8em;
+}
+
+.kol .header p{
+    font-size: 2em;
+}
+
+
+/* Grid System */
+.kol .container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+    grid-auto-rows: 200px;
+    grid-auto-flow: dense;
+    gap: 4px;
+}
+
+.kol .container div img{
+    width: 100%;
+    height: 100%;
+}
+
+.vertical{
+    grid-row: auto/span 2;
+}
+
+.horizental{
+    grid-column: auto/span 2;
+}
+
+.big{
+    grid-row: auto/span 2;
+    grid-column: auto/span 2;
+}
+
+.hidden1{
+    display: none;
+}
+
+.hidden2{
+    display: none;
+}
+.horizental2{
+    grid-column: auto/span 2;
+}
+.hidden3{
+    display: none;
+}
+
+.hidden4{
+    display: none;
+}
+
+/* Responsive */
+@media only screen and (min-width:1200px){
+    .hidden1{
+        display: none;
+    }
+    
+    .hidden2 {
+        display: none;
+    }
+    
+    .hidden3{
+        display: none;
+    }
+
+    .hidden4{
+        display: none;
+    }
+
+
+}
+
+@media only screen and (max-width:1200px){
+    .hidden1{
+        display: block;
+    }
+    
+    .hidden2 {
+        display: block;
+    }
+    
+    .hidden3{
+        display: block;
+    }
+
+    .hidden4{
+        display: block;
+    }
+
+}
+
+
+@media only screen and (max-width:992px){
+
+/* Header */
+.kol .header h1{
+        font-size: 6em;
+    }
+
+    .kol .header p{
+        font-size: 1em;
+    }
+
+
+}
+
+@media only screen and (max-width:768px){
+
+    /* Header */
+    .kol .header h1{
+            font-size: 6em;
+        }
+    
+        .kol .header p{
+            font-size: 1em;
+        }
+    
+    }
+
+    .horizental2{
+        grid-column: auto/span 1;
+    }
+
+    .hidden4{
+        display: block;
+    }
+
+@media only screen and (max-width:578px){
+
+/* Header */
+    .kol .header h1{
+            font-size: 3em;
+        }
+        
+    .kol .header p{
+            font-size: 1em;
+    }
+
+
+    .horizental2{
+        grid-column: auto/span 2;
+    } 
+    
+    .hidden4{
+        display: none;
+    }
+        
+}
